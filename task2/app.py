@@ -9,7 +9,7 @@ def index():
 
 @app.route('/img/<path:path>')
 def index2(path):
-       return send_from_directory('static\\images',path)
+       return send_from_directory('static/images',path)
        
 @app.route('/static/<path:path>')
 def index3(path):
