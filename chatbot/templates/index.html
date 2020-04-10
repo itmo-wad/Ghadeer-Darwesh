@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>My Chat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Add  js and css -->
+    <script type="text/javascript" src="/static/script.js"></script>
+    <!-- <script type = "text/javascript"  src = "{{ url_for('static', filename = 'js/script.js') }}" ></script> -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}"> -->
+
+</head>
+
+<body>
+
+
+    <div class="form-style-6" >
+        <h1>My Chat</h1>
+        <form method="POST" action="" >  
+            <br/>
+            <textarea readonly id="textarea" name="messages" >{{dialog}}</textarea>
+            <br />
+
+            <input type="text" name="new_message" placeholder="Type your Message. Type 'clear' to erase the chat." autofocus>
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+
+
