@@ -3,14 +3,17 @@ import re
 
 app = Flask(__name__)
 
-msg = ''
+
 
 @app.route('/', methods=['Get','POST'])
 def index():
-      getdata = request.form.get("new_message")
-      global msg
-
+      
+      msg=''
+      
       if request.method == 'POST':
+          getdata = request.form.get("new_message")
+          msg = request.form.get("messages")
+          
           user = 'Me : '+ getdata + '\n'
           
           if getdata=='clear':
@@ -36,7 +39,7 @@ def index():
            }
           
           found = 0
-          bot = 'bot: '
+          bot = 'Bot: '
           for key,value in keywords.items():
               rr = re.compile('|'.join(value),re.IGNORECASE)
               if re.search(rr, getdata):
@@ -55,6 +58,5 @@ def index():
    
 if __name__ == '__main__':
 
-    #app.run(host='127.0.0.1',port='5000',debug = True,use_reloader=False)
-    app.run(threaded=True, port='5000')
+    app.run( port='5000',threaded=True)
 
