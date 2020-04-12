@@ -119,7 +119,7 @@ def do_admin_login():
 #execute index function after set the session value
     #return index()
  
-@app.route('/reg')
+@app.route('/register')
 def do_reg():
     return render_template('reg.html')    
 
