@@ -16,30 +16,25 @@
 
 
   <div class="form-style">
-    <h2>Sign up to ChatBot</h2>
+    <h2>Login to ChatBot</h2>
 
     <form method="POST" action="/login">
 
       <i class="fa fa-user icon"> </i>
       <input type="text" name="username" placeholder="Your Name" />
 
-      <i class="fa fa-envelope icon"> </i>
-      <input type="email" name="email" placeholder="Your Email" />
-
-
 
       <i class="fa fa-key icon"> </i>
       <input type="password" name="password" placeholder="Password" />
 
-      <i class="fa fa-key icon"> </i>
-      <input type="password" name="field3" placeholder="Repeat Password" />
 
       {% for message in get_flashed_messages() %}
       <p class="error">{{ message }}</p>
       {% endfor %}
 
-      <input type="submit" value="Register" />
+      <input type="submit" value="Login" />
 
       
     </form>
+    <a href="reg">Register Here</a>
   </div>
