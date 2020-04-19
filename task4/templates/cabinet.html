@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>My Chat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Add  js and css -->
+    <script type="text/javascript" src="/static/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+
+    <div class="form-style-6">
+        <h1>My Chat</h1>
+        <form method="POST" action="/cabinet">
+            <br />
+            <textarea readonly id="textarea" name="messages">{{dialog}}</textarea>
+            <br />
+
+            <input type="text" name="new_message" placeholder="Type your Message. Type 'clear' to erase the chat."
+                autofocus autocomplete="off">
+            <input type="submit" value="Send" />
+        </form>
+        <a href="login" style="float: right;">Logout</a>
+    </div>
