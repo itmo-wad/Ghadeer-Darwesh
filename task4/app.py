@@ -1,11 +1,7 @@
 from flask import Flask, render_template,request,send_from_directory,session,flash
-#from pymongo import MongoClient
 import re
-#client = MongoClient('localhost', 27017)
-#db = client.chatbotdb
-#users = db.users
-
 import pymongo
+
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["chatbotdb"]
 users = db["users"]
