@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>My Cabinet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Add  js and css -->
+    <script type="text/javascript" src="/static/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+
+    <div class="form-style-6">
+        <h1>My Avatar </h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <br />
+            <div class="avatar" id="avatar_id" name="avatar">
+                <img src={{file}} />
+            </div>
+            {% for message in get_flashed_messages() %}
+            <p class="success">{{ message }}</p>
+            {% endfor %}
+            <br />
+            Upload new photo
+            <br />
+            <br />
+            <input type="file" name="file" placeholder="File Location" autofocus autocomplete="off">
+            <input type="submit" value="Upload" />
+        </form>
+        <a href="login" style="float: right;">Logout</a>
+    </div>
